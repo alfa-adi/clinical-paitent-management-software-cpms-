@@ -1,0 +1,29 @@
+{
+  "name": "clinical-paitent-management-software-cpms-",
+  "version": "1.0.0",
+  "description": "with this software we aim to achieve the following \r okay so we will design it in phases where first phases we will design the pre login web interface for displaying information about the product, the pre login interface of website  would be built in 2 version one optimised for pc and other optimised for phone, in second phase we are going to set up sign in and sign up interface using JSON Web token encryptions,",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfa-adi/clinical-paitent-management-software-cpms-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfa-adi/clinical-paitent-management-software-cpms-/issues"
+  },
+  "homepage": "https://github.com/alfa-adi/clinical-paitent-management-software-cpms-#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "resend": "^6.9.1"
+  }
+}

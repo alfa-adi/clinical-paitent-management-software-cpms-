@@ -1,2 +1,3 @@
 # clinical-paitent-management-software-cpms-
 with this software we aim to achieve the following 
+okay so we will design it in phases where first phases we will design the pre login web interface for displaying information about the product, the pre login interface of website  would be built in 2 version one optimised for pc and other optimised for phone, in second phase we are going to set up sign in and sign up interface using JSON Web token encryptions, 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CPMS Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Simple Navbar -->
+    <nav class="navbar" style="position: relative; background: var(--background-dark);">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-staff-snake"></i>
+                CPMS <span>Pro</span>
+            </a>
+            <button id="logout-btn" class="btn btn-outline" style="font-size: 0.9rem;">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 4rem;">
+        <h1 id="welcome-message">Welcome to your Dashboard</h1>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Overview of your clinic's performance.</p>
+
+        <div class="features-grid">
+            <!-- Stat Card 1 -->
+            <div class="feature-card">
+                <h3>Total Patients</h3>
+                <p style="font-size: 2rem; font-weight: 700; color: var(--primary-color);">1,284</p>
+                <p style="font-size: 0.9rem;">+12% from last month</p>
+            </div>
+
+            <!-- Stat Card 2 -->
+            <div class="feature-card">
+                <h3>Appointments Today</h3>
+                <p style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">42</p>
+                <p style="font-size: 0.9rem;">Next: 10:30 AM</p>
+            </div>
+
+            <!-- Stat Card 3 -->
+            <div class="feature-card">
+                <h3>Revenue (MTD)</h3>
+                <p style="font-size: 2rem; font-weight: 700; color: var(--secondary-color);">$15,400</p>
+                <p style="font-size: 0.9rem;">Pending Claims: $3,200</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Protection Script -->
+    <script>
+        // Inline check to prevent flash of content
+        const token = localStorage.getItem('token');
+        if (!token) {
+            window.location.href = 'login.html';
+        }
+    </script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

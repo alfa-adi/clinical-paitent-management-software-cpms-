@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPMS - Next Gen Patient Management</title>
+    <meta name="description" content="Advanced Clinical Patient Management Software for modern healthcare facilities. Streamline operations, enhance patient care, and secure data.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-staff-snake"></i>
+                CPMS <span>Pro</span>
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#contact" class="btn btn-primary">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text animate-fade-in">
+                <h1>Manage Patients with <br> <span>Intelligent Precision</span></h1>
+                <p>The all-in-one clinical management platform designed for modern healthcare providers. Streamline appointments, records, and billing securely.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Start Free Trial</a>
+                    <a href="#features" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="hero-image animate-float delay-200">
+                <div class="hero-card">
+                    <div style="background: rgba(255,255,255,0.05); height: 200px; border-radius: 8px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                        <i class="fa-solid fa-chart-line fa-3x"></i>
+                    </div>
+                    <div style="height: 10px; width: 60%; background: var(--text-secondary); opacity: 0.2; border-radius: 4px; margin-bottom: 0.5rem;"></div>
+                    <div style="height: 10px; width: 40%; background: var(--text-secondary); opacity: 0.2; border-radius: 4px;"></div>
+                </div>
+                
+                <!-- Floating Elements -->
+                <div class="floating-icon icon-1 animate-float delay-500">
+                    <i class="fa-solid fa-check-circle" style="color: #10b981;"></i>
+                    <span style="font-size: 0.8rem; font-weight: 600;">99% Uptime</span>
+                </div>
+                
+                <div class="floating-icon icon-2 animate-float delay-300">
+                    <i class="fa-solid fa-user-shield" style="color: #6366f1;"></i>
+                    <span style="font-size: 0.8rem; font-weight: 600;">HIPAA Compliant</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose CPMS Pro?</h2>
+            </div>
+            <p class="section-subtitle">Powerful tools engineered for medical professionals who demand efficiency and security.</p>
+            
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card delay-100">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-hospital-user"></i>
+                    </div>
+                    <h3>Electronic Health Records</h3>
+                    <p>Access patient history, lab results, and prescriptions instantly with our secure, cloud-based EHR system.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card delay-200">
+                    <div class="feature-icon">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </div>
+                    <h3>Smart Scheduling</h3>
+                    <p>Automated appointment booking, reminders, and waitlist management to minimize no-shows.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card delay-300">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Integrated Billing</h3>
+                    <p>Seamlessly generate invoices, process insurance claims, and track payments in one dashboard.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card delay-400">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3>Bank-Grade Security</h3>
+                    <p>End-to-end encryption complying with HIPAA and GDPR standards to keep patient data safe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simple onboarding</h2>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-item delay-100">
+                    <div class="step-number">1</div>
+                    <img src="https://placehold.co/100x100/1e293b/FFFFFF?text=Setup" alt="Setup" style="border-radius: 12px; margin-bottom: 1rem; width: 80px; height: 80px;">
+                    <h3>Create Account</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Register your clinic and set up practitioner profiles in minutes.</p>
+                </div>
+                
+                <div class="step-item delay-200">
+                    <div class="step-number">2</div>
+                    <img src="https://placehold.co/100x100/1e293b/FFFFFF?text=Import" alt="Import" style="border-radius: 12px; margin-bottom: 1rem; width: 80px; height: 80px;">
+                    <h3>Import Data</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Seamlessly migrate existing patient records via CSV or API integration.</p>
+                </div>
+                
+                <div class="step-item delay-300">
+                    <div class="step-number">3</div>
+                    <img src="https://placehold.co/100x100/1e293b/FFFFFF?text=Go+Live" alt="Live" style="border-radius: 12px; margin-bottom: 1rem; width: 80px; height: 80px;">
+                    <h3>Go Live</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Start managing patients, scheduling, and billing immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Flexible Pricing Plans</h2>
+            </div>
+            <p class="section-subtitle">Choose the plan that fits your clinic's size and needs.</p>
+            
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card delay-100">
+                    <h3>Starter</h3>
+                    <div class="pricing-price">$49<span>/mo</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Up to 2 Practitioners</li>
+                        <li><i class="fa-solid fa-check"></i> 500 Patient Records</li>
+                        <li><i class="fa-solid fa-check"></i> Basic Scheduling</li>
+                        <li><i class="fa-solid fa-check"></i> Email Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="text-align: center;">Choose Starter</a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card featured delay-200">
+                    <span class="badge">Most Popular</span>
+                    <h3>Professional</h3>
+                    <div class="pricing-price">$129<span>/mo</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Up to 10 Practitioners</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Records</li>
+                        <li><i class="fa-solid fa-check"></i> Advanced Billing & Claims</li>
+                        <li><i class="fa-solid fa-check"></i> 24/7 Priority Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="text-align: center;">Choose Professional</a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card delay-300">
+                    <h3>Enterprise</h3>
+                    <div class="pricing-price">Custom</div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Unlimited Practitioners</li>
+                        <li><i class="fa-solid fa-check"></i> Multi-Location Support</li>
+                        <li><i class="fa-solid fa-check"></i> Custom API Integration</li>
+                        <li><i class="fa-solid fa-check"></i> Dedicated Account Manager</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="text-align: center;">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+           <div class="testimonial-card animate-scale-in">
+               <div class="quote">
+                   "CPMS Pro transformed how we run our dermatology clinic. The scheduling features alone saved us 20 hours a week in administrative work."
+               </div>
+               <div class="author">
+                   <img src="https://placehold.co/50x50/334155/FFFFFF?text=JS" alt="Dr. Smith" class="author-avatar">
+                   <div class="author-info">
+                       <h4>Dr. Jennifer Smith</h4>
+                       <span>Chief Dermatologist, SkinCare Clinc</span>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fa-solid fa-staff-snake"></i>
+                        CPMS <span>Pro</span>
+                    </a>
+                    <p>Empowering healthcare providers with next-generation management tools.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 CPMS Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
