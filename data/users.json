@@ -4,5 +4,21 @@
     "name": "anurag",
     "email": "anurag@gmail.com",
     "password": "$2b$10$lKM0X9y/sgOx2pAL0S7zu.H/mdYPhd/aeYE4F8U/V0GXgtfuvjMBi"
+  },
+  {
+    "id": 1770707595627,
+    "name": "Test User",
+    "email": "test@example.com",
+    "password": "$2b$10$51n1xI6NGx3NoLungZyfLu5hFKv.Tl8gvvextrJB4KpKoM7b5KCmW",
+    "isVerified": false,
+    "verificationToken": "196742"
+  },
+  {
+    "id": 1770709273398,
+    "name": "Anurag",
+    "email": "alfa.anurag2020@gmail.com",
+    "password": "$2b$10$bB89Ok4zJXC9IKiJfNbPWOgHDI8aI0ToJQ4Znzcc8eXGWWGBDE7pS",
+    "isVerified": true,
+    "verificationToken": null
   }
 ]

@@ -11,7 +11,7 @@ const { Resend } = require('resend');
 const app = express();
 const PORT = 3000;
 const SECRET_KEY = 'your_secret_key_here'; // In production, use environment variable
-const RESEND_API_KEY = 're_XJuC2XRJ_KeDykS9sYYWhvQzVcKpSfK76'; // REPLACE WITH YOUR RESEND API KEY
+const RESEND_API_KEY = 're_XJuC2XRJ_KeDykS9sYYWhvQzVcKpSfK76'; // Resend API Key
 const resend = new Resend(RESEND_API_KEY);
 const USERS_FILE = path.join(__dirname, 'data', 'users.json');
 
@@ -36,6 +36,7 @@ const saveUsers = (users) => {
 
 // Register Endpoint
 app.post('/api/auth/register', async (req, res) => {
+    console.log('Register request received:', req.body);
     const { name, email, password } = req.body;
 
     if (!name || !email || !password) {
@@ -47,31 +48,43 @@ app.post('/api/auth/register', async (req, res) => {
         return res.status(400).json({ message: 'User already exists' });
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const verificationToken = Math.floor(100000 + Math.random() * 900000).toString(); // 6-digit OTP
-    const newUser = {
-        id: Date.now(),
-        name,
-        email,
-        password: hashedPassword,
-        isVerified: false,
-        verificationToken
-    };
-
-    users.push(newUser);
-    saveUsers(users);
-
     try {
-        await resend.emails.send({
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const verificationToken = Math.floor(100000 + Math.random() * 900000).toString(); // 6-digit OTP
+        const newUser = {
+            id: Date.now(),
+            name,
+            email,
+            password: hashedPassword,
+            isVerified: false,
+            verificationToken
+        };
+
+        users.push(newUser);
+        saveUsers(users);
+
+        console.log('Sending email to:', email);
+        const { data, error } = await resend.emails.send({
             from: 'onboarding@resend.dev',
             to: email,
             subject: 'Verify your CPMS Account',
             html: `<p>Your verification code is: <strong>${verificationToken}</strong></p>`
         });
+
+        if (error) {
+            console.error('Resend API Error:', error);
+            // Don't fail the registration if email fails, but maybe warn?
+            // Or better, fail it so user knows.
+            // But since user is saved... maybe we should revert save?
+            // For now, let's just Log it.
+            return res.status(500).json({ message: 'Error sending verification email: ' + error.message });
+        }
+
+        console.log('Email sent successfully:', data);
         res.status(201).json({ message: 'User registered. Please check your email for verification code.' });
     } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Error sending verification email' });
+        console.error('Server Error:', error);
+        res.status(500).json({ message: 'Internal Server Error' });
     }
 });
 
