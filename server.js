@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
@@ -10,9 +11,9 @@ const { Resend } = require('resend');
 
 const app = express();
 const PORT = 3000;
-const SECRET_KEY = 'your_secret_key_here'; // In production, use environment variable
-const RESEND_API_KEY = 're_XJuC2XRJ_KeDykS9sYYWhvQzVcKpSfK76'; // Resend API Key
-const resend = new Resend(RESEND_API_KEY);
+const SECRET_KEY = process.env.JWT_SECRET; // In production, use environment variable
+const RESEND_API_KEY = process.env.RESEND_API_KEY; // Resend API Key
+const resend = new Resend(process.env.RESEND_API_KEY);
 const USERS_FILE = path.join(__dirname, 'data', 'users.json');
 
 app.use(cors());
